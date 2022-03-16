@@ -129,6 +129,10 @@ void print_dbg(char* msg){
   CDC_Output_Data(msg, strlen(msg));
 }
 
+uint32_t get_clock_ms() {
+  return HAL_GetTick();
+}
+
 void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef *htim) {
   GPIO_InitTypeDef GPIO_InitStruct;
 
